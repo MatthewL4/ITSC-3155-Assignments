@@ -12,4 +12,5 @@ class SandwichMaker:
             return True
 
     def make_sandwich(self, sandwich_size, order_ingredients):
-
+        for ingredient, quantity in order_ingredients.items():
+            self.machine_resources[ingredient] -= quantity
