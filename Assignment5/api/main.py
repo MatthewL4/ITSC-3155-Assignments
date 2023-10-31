@@ -45,7 +45,7 @@ def delete_one_order(order_id: int, db: Session = Depends(get_db)):
 
 
 @app.post("/sandwiches/", response_model=schemas.Sandwich, tags=["Sandwiches"])
-def make_sandwich(sandwich: schemas.SandwichCreate, db: Session = Depends(get_db)):
+def create_sandwich(sandwich: schemas.SandwichCreate, db: Session = Depends(get_db)):
     return sandwiches.create(db=db, sandwich=sandwich)
 
 
